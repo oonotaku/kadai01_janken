@@ -11,7 +11,7 @@
 - 6.「もう一度試す」ボタン押下ですべてリセットされる。
 
 ## ③DEMO
-- 
+- https://oonotaku.github.io/kadai01_janken/
 
 ## ④作ったアプリケーション用のIDまたはPasswordがある場合
 - ID: 今回なし
