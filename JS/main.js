@@ -132,34 +132,17 @@ function enableBox4() {
     }
 }
 
-document.getElementById('cameraInput').addEventListener('change', async (event) => {
+document.getElementById('cameraInput').addEventListener('change', function (event) {
     const file = event.target.files[0];
     if (file) {
-        // 画像プレビュー
         const reader = new FileReader();
         reader.onload = function (e) {
-            document.getElementById('previewImage').src = e.target.result;
-            openPopup();
+            const previewImage = document.getElementById('previewImage');
+            previewImage.src = e.target.result;  // 画像のソースを設定
+            previewImage.style.display = 'block'; // 画像を表示
         };
-        reader.readAsDataURL(file);
-
-        // ここで画像認識APIを使用して焼酎の名前を取得（外部APIを呼び出す処理を追加）
-
-        // 仮の説明文
-        document.getElementById('shochuDescription').innerText = "焼酎の説明がここに表示されます。"; // APIで取得した説明をここに表示
+        reader.readAsDataURL(file); // ファイルをデータURLとして読み込む
     }
 });
-
-// ポップアップを開く
-function openPopup() {
-    document.getElementById('overlay').style.display = 'block';
-    document.getElementById('popup').style.display = 'block';
-}
-
-// ポップアップを閉じる
-function closePopup() {
-    document.getElementById('overlay').style.display = 'none';
-    document.getElementById('popup').style.display = 'none';
-}
 
 
