@@ -36,6 +36,14 @@
     <h2 class="title">焼酎検索</h2>
 <!-- カメラの入力部分 -->
 <input type="file" id="cameraInput" accept="image/*" capture="camera">
+<!-- ポップアップ用のオーバーレイと内容 -->
+<div id="overlay"></div>
+<div id="popup">
+    <h2>焼酎情報</h2>
+    <img id="previewImage" alt="焼酎写真" style="width:100%;">
+    <p id="shochuDescription">焼酎の説明がここに表示されます</p>
+    <button onclick="closePopup()">閉じる</button>
+</div>
 
 <div class="wrapper4">
     <div class="box_end1">
